@@ -3,11 +3,7 @@ import crypt
 import os
 import logging
 
-from m2ee import M2EE, logger  # noqa: E402
-
-logger.setLevel(buildpackutil.get_buildpack_loglevel())
-logger.info("Started Mendix Cloud Foundry Buildpack v2.2.1")
-logging.getLogger("m2ee").propagate = False
+from m2ee import logger  # noqa: E402
 
 
 def gen_htpasswd(users_passwords, file_name_suffix=""):
