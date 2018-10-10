@@ -1,7 +1,7 @@
 import json
 import crypt
 import os
-import logger
+import logging
 
 
 def gen_htpasswd(users_passwords, file_name_suffix=""):
