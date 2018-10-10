@@ -9,8 +9,10 @@ from m2ee import logger  # noqa: E402
 def gen_htpasswd(users_passwords, file_name_suffix=""):
     with open("nginx/.htpasswd" + file_name_suffix, "w") as fh:
         for user, password in users_passwords.items():
-            logger.debug("User:" + user)
-            logger.debug("Password: " + password)
+            userstring = str(user)
+            passwordstring = str(password)
+            logger.debug("User:" + userstring)
+            logger.debug("Password: " + passwordstring)
             if not password:
                 fh.write("\n")
             else:
